@@ -1,6 +1,6 @@
 {
   "name": "amigo-alerta",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Componente React para mostrar alertas de forma padronizada confome os tipos de alertas [Normal], [Aviso] e [Erro].",
   "main": "index.js",
   "scripts": {
