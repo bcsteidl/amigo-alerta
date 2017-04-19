@@ -6,7 +6,7 @@ import Alerta from '..'
 
 class app extends Component {
     mostraNormal = () => {
-        this.alerta.setValor({
+        alerta.setValor({
             tipo: "Normal",
             cabecalho: "[Normal]: 100",
             mensagem: "Esta mensagem é um teste para mensagens do tipo [Normal]",
@@ -17,7 +17,7 @@ class app extends Component {
     }
 
     mostraAviso = () => {
-        this.alerta.setValor({
+        alerta.setValor({
             tipo: "Aviso",
             cabecalho: "[Aviso]: 100",
             mensagem: "Esta mensagem é um teste para mensagens do tipo [Aviso]",
@@ -44,7 +44,7 @@ class app extends Component {
     render() {
         return (
             <div>
-                <Alerta nome="alerta"/>
+                <Alerta/>
                 <Button onClick={this.mostraNormal}>Alerta Normal</Button>
                 <Button onClick={this.mostraAviso}>Alerta Aviso</Button>
                 <Button onClick={this.mostraErro}>Alerta Erro</Button>
