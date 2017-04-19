@@ -1,12 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
-const validate = require('webpack-validator')
 
 const caminho = (pontoFinal = "") => path.resolve(__dirname, pontoFinal)
 
 const eProducao = process.env.NODE_PRD === 'TRUE' || process.env.NODE_PRD === 'true'
 
-module.exports = validate({
+module.exports = {
     entry: [
         "react-hot-loader/patch",
         "webpack-dev-server/client?http://localhost:8080",
@@ -25,46 +24,6 @@ module.exports = validate({
             exclude: [caminho("node_modules")],
             include: [caminho("src")],
             loader: "babel-loader"
-        }, {
-            test: /\.css$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("css")],
-            loader: "style-loader!css-loader"
-        }, {
-            test: /\.eot(\?v=\d+\.\d+\.+\d+)?$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("fonts")],
-            loader: "url-loader?limit=25000"
-        }, {
-            test: /\.(woff|woff2)$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("fonts")],
-            loader: "url-loader?prefix=fonts/&limit=25000"
-        }, {
-            test: /\.ttf(\?v=\d+\.\d+\.+\d+)?$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("fonts")],
-            loader: "url-loader?limit=50000&mimetype=application/octet-stream"
-        }, {
-            test: /\.svg(\?v=\d+\.\d+\.+\d+)?$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("fonts")],
-            loader: "url-loader?limit=110000&mimetype=image/svg+xml"
-        }, {
-            test: /\.png$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("img")],
-            loader: "url-loader?limit=200000"
-        }, {
-            test: /\.jpg$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("img")],
-            loader: "url-loader?limit=100000"
-        }, {
-            test: /\.gif$/,
-            exclude: [caminho("node_modules")],
-            include: [caminho("img")],
-            loader: "url-loader?limit=100000"
         }]
     },
     resolve: {
@@ -83,4 +42,4 @@ module.exports = validate({
     ] : [
         new webpack.HotModuleReplacementPlugin()
     ]
-})
+}

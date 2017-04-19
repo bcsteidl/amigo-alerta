@@ -7,5 +7,6 @@ export default (comp) => {
     // Cria a referencia deste componente no componente pai
     if (comp.props.nome && comp.props.nome != "") {
         comp.parent[comp.props.nome] = comp
+        document[comp.props.nome] = comp
     }
 }

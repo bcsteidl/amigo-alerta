@@ -1,6 +1,6 @@
 {
   "name": "amigo-alerta",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Componente React para mostrar alertas de forma padronizada confome os tipos de alertas [Normal], [Aviso] e [Erro].",
   "main": "index.js",
   "scripts": {
@@ -11,25 +11,18 @@
   "author": "Bruno César Steidl",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-bootstrap": "^0.30.7",
-    "react-dom": "^15.4.2"
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.30.9",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "css-loader": "^0.26.1",
-    "file-loader": "^0.10.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "react-hot-loader": "^3.0.0-beta.2",
-    "standard": "^9.0.0",
-    "standard-loader": "^5.0.0",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1",
-    "webpack-validator": "^2.3.0"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }
