@@ -31,7 +31,7 @@ class app extends Component {
     }
 
     mostraErro = () => {
-        document.alerta.setValor({
+        alerta.setValor({
             tipo: "Erro",
             cabecalho: "[Erro]: 100",
             mensagem: "Esta mensagem é um teste para mensagens do tipo [Erro]",
@@ -44,7 +44,7 @@ class app extends Component {
     render() {
         return (
             <div>
-                <Alerta id="alerta" nome="alerta"/>
+                <Alerta nome="alerta"/>
                 <Button onClick={this.mostraNormal}>Alerta Normal</Button>
                 <Button onClick={this.mostraAviso}>Alerta Aviso</Button>
                 <Button onClick={this.mostraErro}>Alerta Erro</Button>
