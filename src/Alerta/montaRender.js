@@ -17,7 +17,9 @@ export default(comp) => {
                     <b>{comp.state.cabecalho}</b>
                 </Modal.Header>
                 <Modal.Body>
-                    {comp.state.mensagem}
+                    <div contentEditable='false' dangerouslySetInnerHTML={{
+                        __html: comp.state.mensagem
+                    }}></div>
                 </Modal.Body>
                 <Modal.Footer>
                     {painelBotoes}

@@ -20,7 +20,7 @@ class app extends Component {
         alerta.setValor({
             tipo: "Aviso",
             cabecalho: "[Aviso]: 100",
-            mensagem: "Esta mensagem é um teste para mensagens do tipo [Aviso]",
+            mensagem: "Esta mensagem é um teste para mensagens do tipo [Aviso].<br>Caso tenha certeza que quer continuar clique em <b>OK</b>.<br>Caso não tenha clique em <b>Cancelar</b>.",
             ok: () => {
                 console.log("EXECUTOU AVISO!")
             },
